@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/allHome.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+    <title>Emergency Salary</title>
+</head>
+<body>
+    <header id="topmenu">
+        <div>
+            
+        </div>
+        <img th:src="@{/img/logo.png}" alt="logoImg" id="logoImg">
+        <h1 class="title">OMS</h1>
+        <div id="menudiv">
+            <a th:href="@{EmpHome}" class="optLink">
+                <span class="menu"><h3>Home</h3></span>
+            </a>
+            <a th:href="@{home}" class="optLink">
+                <span class="menu"><button  id="logoutEmp"><h3>Logout</h3></button></span>
+            </a>
+            
+        </div>
+    </header>
+    <div id="bar2">
+        <a th:href="@{emergencySalEmp}" class="optLink">
+            <span class="menu1"><h3>Emergency Salary</h3></span>
+        </a>
+        <a th:href="@{viewAttdSelf}" class="optLink">
+            <span class="menu1"><h3>View Attendance</h3></span>
+        </a>
+        <a th:href="@{leaveReqEmp}" class="optLink">
+            <span class="menu1"><h3>Leave Request</h3></span>
+        </a>
+        <a th:href="@{changePass}" class="optLink">
+            <span class="menu1"><h3>Change Password</h3></span>
+        </a>
+        
+    </div>
+    <div id="divbody">
+        <h2 class="signup">Emergency Salary</h2><hr>
+        <form action="" method="post">
+            <div class="details">
+                Your this month salary <br>
+                XXXXXX
+            </div>
+            <div id="bt-align">
+                <button class="btnEmp" type="submit">Request Salary</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

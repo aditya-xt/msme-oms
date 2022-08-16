@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/allHome.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+    <title>View Leave Request</title>
+</head>
+<body>
+    <header id="topmenu">
+        <div>
+            
+        </div>
+        <img th:src="@{/img/logo.png}" alt="logoImg" id="logoImg">
+        <h1 class="title">OMS</h1>
+        <div id="menudiv">
+            <a th:href="@{AdminHome}" class="optLink">
+                <span class="menu"><h3>Home</h3></span>
+            </a>
+            <a th:href="@{home}" class="optLink">
+                <span class="menu"><button  id="logout1"><h3>Logout</h3></button></span>
+            </a>
+            
+        </div>
+    </header>
+    <div id="barAdmin">
+        <a th:href="@{AddEmp}" class="optLink">
+            <span class="menu2"><h3>Add Employee</h3></span>
+        </a>
+        <a th:href="@{ViewPurchase}" class="optLink">
+            <span class="menu2"><h3>View purchase</h3></span>
+        </a>
+        <a th:href="@{ViewSales}" class="optLink">
+            <span class="menu2"><h3>View Sales</h3></span>
+        </a>
+        <a th:href="@{ViewEmployee}" class="optLink">
+            <span class="menu2"><h3>View Employee</h3></span>
+        </a>
+        <a th:href="@{ViewLeaveReq}" class="optLink">
+            <span class="menu2"><h3>View Leave requests</h3></span>
+        </a>
+    </div>
+    <div id="divbody">
+        <h2 class="signup">View Leave Request</h2><hr>
+        <div class="details">
+            
+            	<table id="mainTable">
+            	<thead>
+            	<tr>
+            	<th class="leaveTh">Employee ID</th>
+            	<th class="leaveTh">Employee Name</th>
+            	<th class="leaveTh">Reason</th>
+            	<th class="leaveTh">Start Date</th>
+            	<th class="leaveTh">End Date</th>
+            	<th class="leaveTh">Response</th>
+            	</tr>
+            	</thead>
+            	<tbody>
+            	<tr th:each="leave : ${requests}">
+            	<td class="leaveData" th:text="${leave.empId}"></td>
+            	<td class="leaveData" th:text="${leave.empName}"></td>
+            	<td class="leaveData" name="reasonLeave" th:text="${leave.reason}"></td>
+            	<td class="leaveData" th:text="${leave.startDate}"></td>
+            	<td class="leaveData" th:text="${leave.endDate}"></td>
+            	<td class="leaveData">
+            	
+            	<form action="./updateLeaveA">
+            	<input type="hidden" th:value="${leave.srNo}" name="serialNo" />
+            	<input type="hidden" th:value="${leave.empId}" name="empId" />
+            	<input type="hidden" th:value="${leave.startDate}" name="sd" />
+            	<input type="hidden" th:value="${leave.endDate}" name="ed" />
+            	<button class="btn11" type="submit">Accept</button>
+        		</form>
+        		
+            	<form action="./updateLeaveD">
+            	<input type="hidden" th:value="${leave.srNo}" name="serialNo" />
+            	<input type="hidden" th:value="${leave.empId}" name="empId" />
+            	<input type="hidden" th:value="${leave.startDate}" name="sd" />
+            	<input type="hidden" th:value="${leave.endDate}" name="ed" />
+            	<button class="btn12" type="submit">Decline</button>
+        		</form>
+        		
+        		
+        		
+            	</td>
+
+            	</tr>
+            	</tbody>
+            	</table>
+               
+        </div>
+    </div>
+</body>
+</html>

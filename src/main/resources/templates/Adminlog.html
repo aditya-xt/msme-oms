@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/allHome.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+    <title>Admin Login</title>
+</head>
+<body>
+    <header id="topmenu">
+        <div>
+            
+        </div>
+        <img th:src="@{/img/logo.png}" alt="logoImg" id="logoImg">
+        <h1 class="title">OMS</h1>
+        <div id="menudiv">
+            <a th:href="@{home}" class="optLink">
+                <span class="menu"><h3>Home</h3></span>
+            </a>
+        </div>
+    </header>
+    <div id="divbody">
+        <h2 class="signup">Admin Login</h2><hr>
+        <form action="./adminLoginValidation" method="post">
+        	<div class="details">
+        		<input class="box" type="email" size="35px" maxlength="30px" name="mail" placeholder="E-mail" /><br>
+        		<input class="box" type="password" size="35px" maxlength="50px" name="pass" placeholder="Password" /><br>
+        		<div id="bt-align">
+            		<button class="btn1">Login</button>
+        		</div>
+        	</div>
+        </form>
+    </div>
+</body>
+</html>

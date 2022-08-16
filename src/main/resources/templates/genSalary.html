@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/allHome.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+    <title>Generate Salary</title>
+</head>
+<body>
+    <header id="topmenu">
+        <div>
+            
+        </div>
+        <img th:src="@{/img/logo.png}" alt="logoImg" id="logoImg">
+        <h1 class="title">OMS</h1>
+        <div id="menudiv">
+            <a th:href="@{AccHome}" class="optLink">
+                <span class="menu"><h3>Home</h3></span>
+            </a>
+            <a th:href="@{home}" class="optLink">
+                <span class="menu"><button  id="logout"><h3>Logout</h3></button></span>
+            </a>
+            
+        </div>
+    </header>
+    <div id="bar">
+        <a th:href="@{addSales}" class="optLink">
+            <span class="menu1"><h3>Add Sales</h3></span>
+        </a>
+        <a th:href="@{addPurchase}" class="optLink">
+            <span class="menu1"><h3>Add Purchase</h3></span>
+        </a>
+        <a th:href="@{stockUpdate}" class="optLink">
+            <span class="menu1"><h3>Stock Update</h3></span>
+        </a>
+        <a th:href="@{addAttd}" class="optLink">
+            <span class="menu1"><h3>Add Attendance</h3></span>
+        </a>
+        <a th:href="@{viewAttd}" class="optLink">
+            <span class="menu1"><h3>View Attendance</h3></span>
+        </a>
+        <a th:href="@{genSalary}" class="optLink">
+            <span class="menu1"><h3>Generate Salary</h3></span>
+        </a>
+        <a th:href="@{emergencySal}" class="optLink">
+            <span class="menu1"><h3>Emergency Salary</h3></span>
+        </a>
+        <a th:href="@{leaveReq}" class="optLink">
+            <span class="menu1"><h3>Leave</h3></span>
+        </a>
+        <a th:href="@{changePass}" class="optLink">
+            <span class="menu1"><h3>Change Password</h3></span>
+        </a>
+        
+    </div>
+    <div id="divbody">
+        <h2 class="signup">Generate Salary</h2><hr>
+        <form action="" method="post">
+            <div class="details">
+                Here the salary of all employee will be shown.
+            </div>
+            <div id="bt-align">
+                <button class="btn" type="submit">Generate</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

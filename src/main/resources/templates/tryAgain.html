@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/allHome.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+    <title>Try Again</title>
+</head>
+<body>
+    <header id="topmenu">
+        <div>
+            
+        </div>
+        <img th:src="@{/img/logo.png}" alt="logoImg" id="logoImg">
+        <h1 class="title">OMS</h1>
+        <div id="menudiv">
+            <a th:href="@{home}" class="optLink">
+                <span class="menu"><button  id="logoutEmp"><h3>Logout</h3></button></span>
+            </a>
+        </div>
+    </header>
+    <div id="divbody">
+        <h2 class="signup">Try Again</h2>
+    </div>
+</body>
+</html>

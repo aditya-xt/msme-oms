@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/allHome.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+    <title>Employee Home Page</title>
+</head>
+<body>
+    <header id="topmenu">
+        <div>
+            
+        </div>
+        <img th:src="@{/img/logo.png}" alt="logoImg" id="logoImg">
+        <h1 class="title">OMS</h1>
+        <div id="menudiv">
+            <a th:href="@{home}" class="optLink">
+                <span class="menu"><button  id="logoutEmp"><h3>Logout</h3></button></span>
+            </a>
+            
+        </div>
+    </header>
+    
+    <!-- <h2>This is Accountants home page</h2> -->
+    <section id="review_section_emp">
+        <h1>Welcome </h1>
+        <div id="review_container">
+            <a th:href="@{emergencySalEmp}" class="optLink">
+                <div class="review_card">
+                    <h3>Emergency Salary</h3>
+                    <!-- <p>In the Mercedes-Benz A-Class Limousine, you also get the largest boot in the segment with 405 litres of volume in the petrol model and in the diesel.</p> -->
+                </div>
+            </a>
+            <a th:href="@{viewAttdSelf}" class="optLink">
+                <div class="review_card">
+                    <h3>View Attendance</h3>
+                    <!-- <p>The steering wheel is a nice chunky unit with a trackpad that you will find pretty much on all Mercedes-Benz cars these days while the rotary controls.</p> -->
+                </div>
+            </a>
+            <a th:href="@{leaveReqEmp}" class="optLink">
+                <div class="review_card">
+                    <h3>Leave Request</h3>
+                    <!-- <p>The top part of the dashboard is black, the middle gets a wooden finish and then, you have a light coloured soft-touch material in the lower part.</p> -->
+                </div>
+            </a>
+            <a th:href="@{changePass}" class="optLink">
+                <div class="review_card">
+                    <h3>Change Password</h3>
+                    <!-- <p>The top part of the dashboard is black, the middle gets a wooden finish and then, you have a light coloured soft-touch material in the lower part.</p> -->
+                </div>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

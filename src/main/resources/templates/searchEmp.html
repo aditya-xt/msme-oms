@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/allHome.css}">
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+    <title>Search Employee</title>
+</head>
+<body>
+    <header id="topmenu">
+        <div>
+            
+        </div>
+        <img th:src="@{/img/logo.png}" alt="logoImg" id="logoImg">
+        <h1 class="title">OMS</h1>
+        <div id="menudiv">
+            <a th:href="@{AdminHome}" class="optLink">
+                <span class="menu"><h3>Home</h3></span>
+            </a>
+            <a th:href="@{home}" class="optLink">
+                <span class="menu"><button  id="logout1"><h3>Logout</h3></button></span>
+            </a>
+            
+        </div>
+    </header>
+    <div id="barAdmin">
+        <a th:href="@{AddEmp}" class="optLink">
+            <span class="menu2"><h3>Add Employee</h3></span>
+        </a>
+        <a th:href="@{ViewPurchase}" class="optLink">
+            <span class="menu2"><h3>View purchase</h3></span>
+        </a>
+        <a th:href="@{ViewSales}" class="optLink">
+            <span class="menu2"><h3>View Sales</h3></span>
+        </a>
+        <a th:href="@{ViewEmployee}" class="optLink">
+            <span class="menu2"><h3>View Employee</h3></span>
+        </a>
+        <a th:href="@{ViewLeaveReq}" class="optLink">
+            <span class="menu2"><h3>View Leave requests</h3></span>
+        </a>
+    </div>
+    <div id="divbody">
+        <h2 class="signup">View Employee</h2><hr>
+        <div class="details">
+        <form action="./searchEmp">
+        <input class="box" id="eno" type="number" size="35px" maxlength="30px" name="userid" placeholder="Employee No." />
+        <div id="bt-align11">
+            <button class="btn1">Search</button>
+        </div>
+        </form>
+        </div>
+        <table id="mainTable">
+            	<thead id="tableHead">
+            	<tr>
+            	<th class="heading">Employee ID</th>
+            	<th class="heading">Emp Name</th>
+            	<th class="heading">Daily Pay</th>
+            	<th class="heading">Leave Balance</th>
+            	<th class="heading">Email</th>
+            	<th class="heading">Phone No.</th>
+            	<th class="heading">Address</th>
+            	<th class="heading">Emp Type</th>
+            	</tr>
+            	</thead>
+            	<tbody id="tableBody">
+            	<tr class="tableRow">
+            	<td class="tableData" th:text="${empData.empId}"></td>
+            	<td class="tableData" th:text="${empData.empName}"></td>
+            	<td class="tableData" th:text="${empData.pay}"></td>
+            	<td class="tableData" th:text="${empData.leaveAvail}"></td>
+            	<td class="tableData" th:text="${empData.email}"></td>
+            	<td class="tableData" th:text="${empData.phoneNo}"></td>
+            	<td class="tableData" th:text="${empData.address}"></td>
+            	<td class="tableData" th:text="${empData.empType}"></td>
+            	</tr>
+            	</tbody>
+        </table>
+    </div>
+</body>
+</html>
