@@ -39,8 +39,8 @@ public class MsmeOmsApplication {
 		
 		SpringApplication.run(MsmeOmsApplication.class, args);
 		
-		org.springframework.context.ApplicationContext context = SpringApplication.run(MsmeOmsApplication.class, args);
-			
+// 		org.springframework.context.ApplicationContext context = SpringApplication.run(MsmeOmsApplication.class, args);
+// 			
 //		Employee employee = new Employee("Jani", 875, "mukul@gmail.com", 9975064874L, "U.P.", EmpType.ACC);
 //		
 //		
