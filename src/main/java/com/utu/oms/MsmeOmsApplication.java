@@ -39,15 +39,15 @@ public class MsmeOmsApplication {
 		
 		SpringApplication.run(MsmeOmsApplication.class, args);
 		
-//		org.springframework.context.ApplicationContext context = SpringApplication.run(MsmeOmsApplication.class, args);
+		org.springframework.context.ApplicationContext context = SpringApplication.run(MsmeOmsApplication.class, args);
 			
 //		Employee employee = new Employee("Jani", 875, "mukul@gmail.com", 9975064874L, "U.P.", EmpType.ACC);
-		
-		
+//		
+//		
 //		EmployeeDao dao = context.getBean(EmployeeDaoImpl.class);
 //		Employee employeeObj = dao.addEmployee(employee);
 //		System.out.println(">>>> Added done");
-		
+//		
 //		Employee employee = dao.getEmployee(16);
 //		System.out.println(employee);
 //		
@@ -71,7 +71,7 @@ public class MsmeOmsApplication {
 //			e.printStackTrace();
 //		}
 //		System.out.println(">>>> Leave req : "+leaveRequest);
-		
+//		
 		
 //		System.out.println(save.getEmpId());
 		
